@@ -15,6 +15,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    NSMutableDictionary* defaults =[NSMutableDictionary dictionary];
+    NSArray* tmpArray = [NSArray array];
+    [defaults setObject:tmpArray forKey:@"list"];
+    //[defaults setObject:tmpDic forKey:@"logs"];
+    [ud registerDefaults:defaults];
     return YES;
 }
 							

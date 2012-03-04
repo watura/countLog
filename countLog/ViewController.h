@@ -8,6 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>{
+    IBOutlet UITableView* listTableView;
+    IBOutlet UIButton* createItemButton;    
+    IBOutlet UIButton* deleteItemButton;    
+    IBOutlet UIView* createView;
+    IBOutlet UIButton* backgroundView;
+}
+@property (strong,nonatomic) IBOutlet UITableView* listTableView;
+@property (strong,nonatomic) IBOutlet UIButton* createItemButton;    
+@property (strong,nonatomic) IBOutlet IBOutlet UIView* createView;
+@property (strong,nonatomic) IBOutlet IBOutlet UIButton* backgroundView;
+@property (strong,nonatomic) IBOutlet IBOutlet UIButton* deleteItemButton;
+
+
+
+-(IBAction)createNewItem:(id)sender;
+-(IBAction)cancelBtn:(id)sender;
+-(IBAction)addBtn:(id)sender;
+-(IBAction)UpBtn:(UIButton*)sender;
 
 @end
